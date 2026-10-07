@@ -1,0 +1,167 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Cultivo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f8f3;
+            color: #26382a;
+        }
+
+        header {
+            background: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 8px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .datos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .tarjeta {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .icono {
+            font-size: 40px;
+        }
+
+        .tarjeta h2 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .valor {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4caf50;
+        }
+
+        .estado {
+            margin-top: 30px;
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .estado h2 {
+            margin-bottom: 15px;
+        }
+
+        #mensaje {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 18px;
+            border-radius: 12px;
+            background: #c8e6c9;
+            color: #256029;
+        }
+
+        .riego {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 700px) {
+            .datos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🌱 Control de Cultivo</h1>
+        <p>Monitoreo del estado del cultivo</p>
+    </header>
+
+    <div class="contenedor">
+
+        <div class="datos">
+
+            <div class="tarjeta">
+                <div class="icono">💧</div>
+                <h2>Humedad del suelo</h2>
+                <div class="valor" id="humedad">68%</div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="icono">☀️</div>
+                <h2>Luz recibida</h2>
+                <div class="valor" id="luz">75%</div>
+            </div>
+
+            <div class="tarjeta">
+                <div class="icono">💦</div>
+                <h2>Agua disponible</h2>
+                <div class="valor" id="agua">82%</div>
+            </div>
+
+        </div>
+
+        <div class="estado">
+
+            <h2>Estado del cultivo</h2>
+
+            <div id="mensaje">
+                🟢 CULTIVO EN BUEN ESTADO
+            </div>
+
+            <div class="riego" id="riego">
+                🚿 Riego: NO NECESARIO
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        Proyecto escolar - Control de Cultivo
+    </footer>
+
+</body>
+</html>
+```
